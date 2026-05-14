@@ -1,0 +1,26 @@
+# === Docker & Database (Basado en tu imagen) ===
+# Ignoramos la carpeta de datos de la base de datos por completo
+docker-env/db/
+
+# Archivos específicos que se ven en image_841ee7.png
+.my-healthcheck.cnf
+aria_log_control
+aria_log.*
+ddl_recovery*
+ib_buffer_pool
+ib_logfile*
+ibdata*
+ibtmp*
+mariadb_upgrade_info
+multi-master.info
+tc.log
+undo*
+
+# === Archivos del Sistema y Entorno ===
+.env
+.DS_Store
+Thumbs.db
+
+# === IDEs ===
+.vscode/
+.idea/

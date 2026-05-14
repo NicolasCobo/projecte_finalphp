@@ -1,0 +1,448 @@
+/* ======================================================
+   ESTILS.CSS - Biblioteca Moderna
+====================================================== */
+
+/* ■■■ GENERAL ■■■ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 0;
+}
+
+/* ======================================================
+   HERO / CABECERA
+====================================================== */
+
+.hero {
+    background:
+        linear-gradient(rgba(7,18,35,0.78),
+        rgba(7,18,35,0.78)),
+        url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 75px 25px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 650px;
+    margin: auto;
+    color: #d7dde8;
+}
+
+/* ======================================================
+   NAVEGACIÓN
+====================================================== */
+
+nav {
+    background: #0f172a;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* MÁS ESPACIO ENTRE PALABRAS */
+    gap: 90px;
+
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    /* MÁS SEPARACIÓN ENTRE LETRAS */
+    letter-spacing: 2px;
+
+    position: relative;
+    transition: 0.25s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fbbf24;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+/* ======================================================
+   TÍTULOS
+====================================================== */
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h2 {
+    color: #0f172a;
+    font-size: 23px;
+    margin-bottom: 14px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+h3 {
+    color: #1e3a8a;
+    font-size: 18px;
+}
+
+/* ======================================================
+   TARJETAS / SECCIONES
+====================================================== */
+
+.card,
+.seccio-editor {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+    transition: 0.25s ease;
+}
+
+.card:hover,
+.seccio-editor:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* ======================================================
+   TABLAS
+====================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    margin-top: 18px;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tr:hover {
+    background: #dbeafe;
+}
+
+/* Columna acciones */
+th:last-child,
+td:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+/* ======================================================
+   FORMULARIOS
+====================================================== */
+
+form {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    max-width: 680px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='date'],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #f8fafc;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+/* ======================================================
+   BOTONES
+====================================================== */
+
+button,
+.btn-afegir,
+.btn-tornar,
+.btn-editar,
+.btn-esborrar {
+    display: inline-block;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: 600;
+}
+
+/* Guardar */
+button[type='submit'] {
+    background: #2563eb;
+    color: white;
+    padding: 9px 16px;
+    font-size: 13px;
+}
+
+button[type='submit']:hover {
+    background: #1d4ed8;
+}
+
+/* +NOU */
+.btn-afegir {
+    background: #2563eb;
+    color: white;
+    padding: 5px 10px;
+    font-size: 11px;
+    width: auto;
+    line-height: 1.2;
+}
+
+.btn-afegir:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Editar */
+.btn-editar {
+    background: #0f172a;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-editar:hover {
+    background: #020617;
+}
+
+/* Eliminar */
+.btn-esborrar {
+    background: #dc2626;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-esborrar:hover {
+    background: #b91c1c;
+}
+
+/* Volver */
+.btn-tornar {
+    background: #64748b;
+    color: white;
+    padding: 8px 14px;
+    font-size: 12px;
+}
+
+.btn-tornar:hover {
+    background: #475569;
+}
+
+/* ======================================================
+   MENSAJES
+====================================================== */
+
+.missatge-ok {
+    background: #ecfdf5;
+    color: #047857;
+    padding: 12px 15px;
+    border-left: 4px solid #10b981;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.missatge-error {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 12px 15px;
+    border-left: 4px solid #ef4444;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* ======================================================
+   BUSCADOR
+====================================================== */
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buscador input {
+    flex: 1;
+    margin: 0;
+}
+
+/* ======================================================
+   ESTADÍSTICAS
+====================================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #2563eb;
+}
+
+.stat-box p {
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 28px;
+    margin-top: 60px;
+    font-size: 12px;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media screen and (max-width: 768px) {
+
+    nav .container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+}
