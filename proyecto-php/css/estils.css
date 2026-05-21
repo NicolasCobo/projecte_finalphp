@@ -114,6 +114,15 @@ h3 {
     font-weight: 700;
 }
 
+h1 {
+    color: #0f172a;
+    font-size: 28px;
+    margin-bottom: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #2563eb;
+}
+
 h2 {
     color: #0f172a;
     font-size: 23px;
