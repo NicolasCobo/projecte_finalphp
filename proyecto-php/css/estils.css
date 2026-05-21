@@ -1,5 +1,5 @@
 /* ======================================================
-   ESTILS.CSS - Biblioteca Moderna
+   ESTILS.CSS - Biblioteca Moderna Premium
 ====================================================== */
 
 /* ■■■ GENERAL ■■■ */
@@ -13,7 +13,6 @@ body {
     font-size: 14px;
 }
 
-/* Contenedor principal */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -62,29 +61,26 @@ nav {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    width: 100%;
 }
 
 nav .container {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* MÁS ESPACIO ENTRE PALABRAS */
-    gap: 90px;
-
+    gap: 35px;
     padding: 0;
+    margin: 0 auto;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-
     font-size: 13px;
     font-weight: 600;
-
-    /* MÁS SEPARACIÓN ENTRE LETRAS */
-    letter-spacing: 2px;
-
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    padding: 10px 15px;
     position: relative;
     transition: 0.25s;
 }
@@ -96,7 +92,7 @@ nav a::after {
     height: 2px;
     background: #fbbf24;
     left: 0;
-    bottom: -5px;
+    bottom: -2px;
     transition: 0.3s;
 }
 
@@ -112,7 +108,9 @@ nav a:hover {
    TÍTULOS
 ====================================================== */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
 }
 
@@ -195,14 +193,29 @@ td:last-child {
 }
 
 /* ======================================================
-   FORMULARIOS
+   FORMULARIOS CENTRADOS
 ====================================================== */
 
+/* CONTENEDOR CENTRAL */
+.form-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* FORMULARIO */
 form {
     background: white;
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+
+    /* CENTRADO */
+    margin: 30px auto;
+
+    /* TAMAÑO */
+    width: 100%;
     max-width: 680px;
 }
 
@@ -414,11 +427,19 @@ footer {
    RESPONSIVE
 ====================================================== */
 
+@media screen and (max-width: 992px) {
+
+    nav .container {
+        gap: 15px;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     nav .container {
         flex-direction: column;
-        gap: 16px;
+        gap: 10px;
+        padding: 10px 0;
     }
 
     .hero {
